@@ -49,8 +49,9 @@ function Article() {
             <>
                 {
                     nodeList &&
-                    nodeList.map(item => 
-                        item
+                    nodeList.map((item) => {
+                        return item
+                    }
                     )
                 }
             </>            

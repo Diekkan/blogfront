@@ -27,11 +27,12 @@ const ContentTypeSelector = ({awaitMode, nodeList, setAwaitMode, setNodeList}) =
             setAwaitMode(false)
         }.bind(this), 700)
         setPicked(type)
-        let newNodeList = nodeList
-        newNodeList.push(<Node nodeType={type} />)
+        const newNodeList = nodeList
+        console.log(newNodeList)
+        console.log(newNodeList.length)
+        newNodeList.push(<Node nodeType={type} key={`node.${newNodeList.length}`} />)
         setNodeList(newNodeList)
         console.log(type)
-        return
     }
     
     return(
@@ -42,8 +43,8 @@ const ContentTypeSelector = ({awaitMode, nodeList, setAwaitMode, setNodeList}) =
                 pickedOption === null &&
                 <>
                 {
-                    contentTypes.map(item  =>
-                        <div id={item} 
+                    contentTypes.map((item, idx)  =>
+                        <div key={`types.${idx}`} 
                         className='type-selector-icons'
                         onClick={() => typePick(item)}>
                         <img src={logoType(item)} alt=''/>

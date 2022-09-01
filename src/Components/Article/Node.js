@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import CancelIcon from './bx-x.svg'
 import SubmitIcon from './bx-check.svg'
 
-const Node = ({nodeType}) => {
+const Node = ({nodeType, id}) => {
 
     const [ content, setContent ] = useState('')
     const [ type, setType ] = useState(nodeType)
@@ -25,13 +25,13 @@ const Node = ({nodeType}) => {
     if (type === 'text') {
         return (
             <>
-                <div id='1' className='text-node'>
-                    <input
+                <div id={id} className='text-node'>
+                    <textarea
                         className='text-box'
                         placeholder='Escribe aqui'
                         onChange={e => setContent(e.target.value)}
                         value={content}
-                    ></input>
+                    ></textarea>
                     {manageNewNode()}
                 </div>
             </>

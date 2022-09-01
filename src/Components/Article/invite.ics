@@ -1,0 +1,95 @@
+BEGIN:VCALENDAR
+METHOD:REQUEST
+PRODID:Microsoft Exchange Server 2010
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID:Montevideo Standard Time
+BEGIN:STANDARD
+DTSTART:16010101T000000
+TZOFFSETFROM:-0300
+TZOFFSETTO:-0300
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:16010101T000000
+TZOFFSETFROM:-0300
+TZOFFSETTO:-0300
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+ORGANIZER;CN=Maria Eugui:mailto:mb.eugui@tcs.com
+ATTENDEE;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE;CN=Pablo Guil
+ lermoni:mailto:pablo.guillermoni@tcs.com
+ATTENDEE;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE;CN=Sebastian 
+ Gutierrez:mailto:seba.gutierrez@tcs.com
+ATTENDEE;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE;CN=merentiel.
+ diego@gmail.com:mailto:merentiel.diego@gmail.com
+ATTENDEE;ROLE=OPT-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE;CN=TAG IT Grp
+ :mailto:TAG.IT@tcs.com
+ATTACH:CID:ABABF40872BF5F489B702DE5BA356307@INDPRD01.PROD.OUTLOOK.COM
+DESCRIPTION;LANGUAGE=en-US:Hello! 😊\n\nI´m happy that you are moving fo
+ rward in the IT Trainee program process.\n\nI´m setting this meeting for 
+ your technical evaluation\, this meeting will be perform in English from o
+ ne of our TCS Leaders.\n\nI´m wishing you all the best!\n\n\n____________
+ ____________________________________________________________________\nMicr
+ osoft Teams meeting\nJoin on your computer or mobile app\nClick here to jo
+ in the meeting<https://teams.microsoft.com/l/meetup-join/19%3ameeting_Njkz
+ MjkxY2ItNzRhMC00ZDI0LWEwMjgtNTQ4YTVmNDFmMTMw%40thread.v2/0?context=%7b%22T
+ id%22%3a%22404b1967-6507-45ab-8a6d-7374a3f478be%22%2c%22Oid%22%3a%22ddb02d
+ 28-2615-4bcf-b7ba-1570af3d8003%22%7d>\nMeeting ID: 454 241 301 522\nPassco
+ de: 73Nz2m\nDownload Teams<https://www.microsoft.com/en-us/microsoft-teams
+ /download-app> | Join on the web<https://www.microsoft.com/microsoft-teams
+ /join-a-meeting>\nJoin with a video conferencing device\nindiatcs@m.webex.
+ com\nVideo Conference ID: 138 196 102 2\nAlternate VTC instructions<https:
+ //www.webex.com/msteams?confid=1381961022&tenantkey=indiatcs&domain=m.webe
+ x.com>\nLearn More<https://aka.ms/JoinTeamsMeeting> | Meeting options<http
+ s://teams.microsoft.com/meetingOptions/?organizerId=ddb02d28-2615-4bcf-b7b
+ a-1570af3d8003&tenantId=404b1967-6507-45ab-8a6d-7374a3f478be&threadId=19_m
+ eeting_NjkzMjkxY2ItNzRhMC00ZDI0LWEwMjgtNTQ4YTVmNDFmMTMw@thread.v2&messageI
+ d=0&language=en-US>\n_____________________________________________________
+ ___________________________\n
+UID:040000008200E00074C5B7101A82E0080000000023E43BCEACBCD801000000000000000
+ 0100000009660A6E6FB139B498939718D5F53BF02
+SUMMARY;LANGUAGE=en-US:Technical Round - Diego Merentiel - IT trainee
+DTSTART;TZID=Montevideo Standard Time:20220901T153000
+DTEND;TZID=Montevideo Standard Time:20220901T160000
+CLASS:PUBLIC
+PRIORITY:5
+DTSTAMP:20220830T201234Z
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+SEQUENCE:0
+LOCATION;LANGUAGE=en-US:
+X-MICROSOFT-CDO-APPT-SEQUENCE:0
+X-MICROSOFT-CDO-OWNERAPPTID:2120806691
+X-MICROSOFT-CDO-BUSYSTATUS:TENTATIVE
+X-MICROSOFT-CDO-INTENDEDSTATUS:BUSY
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-CDO-IMPORTANCE:1
+X-MICROSOFT-CDO-INSTTYPE:0
+X-MICROSOFT-ONLINEMEETINGINFORMATION:{"OnlineMeetingChannelId":null\,"Onlin
+ eMeetingProvider":3}
+X-MICROSOFT-SKYPETEAMSMEETINGURL:https://teams.microsoft.com/l/meetup-join/
+ 19%3ameeting_NjkzMjkxY2ItNzRhMC00ZDI0LWEwMjgtNTQ4YTVmNDFmMTMw%40thread.v2/
+ 0?context=%7b%22Tid%22%3a%22404b1967-6507-45ab-8a6d-7374a3f478be%22%2c%22O
+ id%22%3a%22ddb02d28-2615-4bcf-b7ba-1570af3d8003%22%7d
+X-MICROSOFT-SCHEDULINGSERVICEUPDATEURL:https://api.scheduler.teams.microsof
+ t.com/teams/404b1967-6507-45ab-8a6d-7374a3f478be/ddb02d28-2615-4bcf-b7ba-1
+ 570af3d8003/19_meeting_NjkzMjkxY2ItNzRhMC00ZDI0LWEwMjgtNTQ4YTVmNDFmMTMw@th
+ read.v2/0
+X-MICROSOFT-SKYPETEAMSPROPERTIES:{"cid":"19:meeting_NjkzMjkxY2ItNzRhMC00ZDI
+ 0LWEwMjgtNTQ4YTVmNDFmMTMw@thread.v2"\,"rid":0\,"mid":0\,"uid":null\,"priva
+ te":true\,"type":0}
+X-MICROSOFT-ONLINEMEETINGCONFLINK:conf:sip:2199273@tcs.com\;gruu\;opaque=ap
+ p:conf:focus:id:teams:2:0!19:meeting_NjkzMjkxY2ItNzRhMC00ZDI0LWEwMjgtNTQ4Y
+ TVmNDFmMTMw-thread.v2!ddb02d2826154bcfb7ba1570af3d8003!404b1967650745ab8a6
+ d7374a3f478be
+X-MICROSOFT-DONOTFORWARDMEETING:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+X-MICROSOFT-LOCATIONS:[]
+BEGIN:VALARM
+DESCRIPTION:REMINDER
+TRIGGER;RELATED=START:-PT15M
+ACTION:DISPLAY
+END:VALARM
+END:VEVENT
+END:VCALENDAR
