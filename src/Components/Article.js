@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import Node from './Article/Node'
 import AddButton from './Article/AddButton'
 import ContentTypeSelector from './Article/ContentTypeSelector'
@@ -7,15 +7,13 @@ import ContentTypeSelector from './Article/ContentTypeSelector'
 function Article() {
 
     const [awaitMode, setAwaitMode] = useState(false);
-    const [nodeType, setNodeType] = useState(null);
-    const [content, setContent] = useState([]);
+    /*const [nodeType, setNodeType] = useState(null);*/
+    const [nodeList, setNodeList] = useState([]);
     const [cancelNode, setCancelNode] = useState(false);
-
+    /*
     const renderAddButton = () => {
         if (awaitMode === false) {
-            return <AddButton
-                    awaitMode={awaitMode}
-                    setAwaitMode={setAwaitMode}/>
+            return 
         }
     }
 
@@ -27,6 +25,7 @@ function Article() {
                     setNodeType={setNodeType}/>
         } 
     }
+    
     const renderNode = () => {
         if (nodeType !== null && cancelNode === false) {
             return <Node nodeType={nodeType} 
@@ -35,16 +34,36 @@ function Article() {
         }
     }
 
+    useEffect(() => {
+        console.log(nodeList)
+        console.log(nodeList.length)
+        console.log()
+        let newList = nodeList
+        newList.push(<Node nodeType='text' />)
+        console.log(`setting nodeList to\n ${newList}`)
+        setNodeList(newList)
+    }, [nodeList])
+    */
     return (
         <div className='article'>
-            {renderNode()}
-            {renderAddButton()}
-            {/*renderContentTypeSelector()*/}
-            { awaitMode &&
+            <>
+                {
+                    nodeList &&
+                    nodeList.map(item => 
+                        item
+                    )
+                }
+            </>            
+            {/*renderNode()*/}
+            { !awaitMode ? 
+                <AddButton
+                    awaitMode={awaitMode}
+                    setAwaitMode={setAwaitMode}/> :
                 <ContentTypeSelector 
                     awaitMode={awaitMode}
+                    nodeList={nodeList}
                     setAwaitMode={setAwaitMode}
-                    setNodeType={setNodeType}/>
+                    setNodeList={setNodeList}/>
             }
         </div>
     )

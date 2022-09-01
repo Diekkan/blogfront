@@ -1,19 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import CancelIcon from './bx-x.svg'
 import SubmitIcon from './bx-check.svg'
 
-const Node = ({nodeType, setContent, setNodeType}) => {
+const Node = ({nodeType}) => {
+
+    const [ content, setContent ] = useState('')
+    const [ type, setType ] = useState(nodeType)
+
 
     const closeNode = () => {
         console.log("x")
-        setNodeType(null)
+        setType(null)
     }
     const manageNewNode = () => {
         return (
             <div className='manage-node'>
-                <div id='submit-node'>
-                    <img className='button-icon' src={SubmitIcon} alt=''></img>
-                </div>
                 <div id='cancel-node' onClick={() => closeNode()}>
                     <img className='button-icon' src={CancelIcon} alt=''></img>
                 </div>
@@ -21,11 +22,16 @@ const Node = ({nodeType, setContent, setNodeType}) => {
         )
     }
 
-    if (nodeType === 'text') {
+    if (type === 'text') {
         return (
             <>
                 <div id='1' className='text-node'>
-                    <input className='text-box' placeholder='Escribe aqui'></input>
+                    <input
+                        className='text-box'
+                        placeholder='Escribe aqui'
+                        onChange={e => setContent(e.target.value)}
+                        value={content}
+                    ></input>
                     {manageNewNode()}
                 </div>
             </>

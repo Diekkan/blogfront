@@ -3,11 +3,13 @@ import TextIcon from './bx-text.svg'
 import ImageIcon from './bxs-image.svg'
 import VideoIcon from './bxs-video.svg'
 import AudioIcon from './bxs-microphone.svg'
+import Node from './Node'
 
-const ContentTypeSelector = ({awaitMode, setAwaitMode, setNodeType}) => {
+const ContentTypeSelector = ({awaitMode, nodeList, setAwaitMode, setNodeList}) => {
     const contentTypes = ['text','image','video','audio']
-    const [closeAnim, setCloseAnim] = useState(false)
-
+    const [ closeAnim, setCloseAnim ] = useState(false)
+    const [ pickedOption, setPicked ] = useState(null)
+    
     const logoType = (type) => {
         if (type === 'text'){
             return TextIcon
@@ -24,7 +26,10 @@ const ContentTypeSelector = ({awaitMode, setAwaitMode, setNodeType}) => {
         setTimeout(function(){
             setAwaitMode(false)
         }.bind(this), 700)
-        setNodeType(type)
+        setPicked(type)
+        let newNodeList = nodeList
+        newNodeList.push(<Node nodeType={type} />)
+        setNodeList(newNodeList)
         console.log(type)
         return
     }
@@ -34,13 +39,18 @@ const ContentTypeSelector = ({awaitMode, setAwaitMode, setNodeType}) => {
          'content-type-selector-fadeout':
          'content-type-selector'}>
             {
-                contentTypes.map(item  =>
-                    <div id={item} 
-                    className='type-selector-icons'
-                    onClick={() => typePick(item)}>
-                    <img src={logoType(item)} alt=''/>
-                </div>
-                )
+                pickedOption === null &&
+                <>
+                {
+                    contentTypes.map(item  =>
+                        <div id={item} 
+                        className='type-selector-icons'
+                        onClick={() => typePick(item)}>
+                        <img src={logoType(item)} alt=''/>
+                    </div>
+                )}
+                </>
+                
             }
         </div>
     )
