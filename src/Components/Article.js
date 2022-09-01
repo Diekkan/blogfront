@@ -8,7 +8,7 @@ function Article() {
 
     const [awaitMode, setAwaitMode] = useState(false);
     const [nodeType, setNodeType] = useState(null);
-    const [content, setContent] = useState('');
+    const [content, setContent] = useState([]);
     const [cancelNode, setCancelNode] = useState(false);
 
     const renderAddButton = () => {
@@ -39,7 +39,13 @@ function Article() {
         <div className='article'>
             {renderNode()}
             {renderAddButton()}
-            {renderContentTypeSelector()}
+            {/*renderContentTypeSelector()*/}
+            { awaitMode &&
+                <ContentTypeSelector 
+                    awaitMode={awaitMode}
+                    setAwaitMode={setAwaitMode}
+                    setNodeType={setNodeType}/>
+            }
         </div>
     )
 }
