@@ -3,7 +3,7 @@ import TextIcon from './bx-text.svg'
 import ImageIcon from './bxs-image.svg'
 import VideoIcon from './bxs-video.svg'
 import AudioIcon from './bxs-microphone.svg'
-import Node from './Node'
+import Node from './Node/Node'
 
 const ContentTypeSelector = ({awaitMode, nodeList, setAwaitMode, setNodeList}) => {
     const contentTypes = ['text','image','video','audio']

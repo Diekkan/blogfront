@@ -1,42 +1,46 @@
 import React, { useState } from 'react'
-import CancelIcon from './bx-x.svg'
-import SubmitIcon from './bx-check.svg'
+import TextNode from './TextNode/TextNode'
+import ImageNode from './ImageNode'
+import VideoNode from './VideoNode'
+import AudioNode from './AudioNode'
+
+
 
 const Node = ({nodeType, id}) => {
 
     const [ content, setContent ] = useState('')
     const [ type, setType ] = useState(nodeType)
 
-
-    const closeNode = () => {
-        console.log("x")
-        setType(null)
-    }
-    const manageNewNode = () => {
-        return (
-            <div className='manage-node'>
-                <div id='cancel-node' onClick={() => closeNode()}>
-                    <img className='button-icon' src={CancelIcon} alt=''></img>
-                </div>
-            </div>
-        )
-    }
-
     if (type === 'text') {
         return (
-            <>
-                <div id={id} className='text-node'>
-                    <textarea
-                        className='text-box'
-                        placeholder='Escribe aqui'
-                        onChange={e => setContent(e.target.value)}
-                        value={content}
-                    ></textarea>
-                    {manageNewNode()}
-                </div>
-            </>
+            <TextNode id={id}
+                      content={content}
+                      setContent={setContent}
+                      type={setType}/>
+        )
+    } else if (type === 'image') {
+        return (
+            <ImageNode id={id}
+                      content={content}
+                      setContent={setContent}
+                      type={setType}/>
+        )
+    } else if (type === 'video') {
+        return (
+            <VideoNode id={id}
+                      content={content}
+                      setContent={setContent}
+                      type={type}/>
+        )
+    } else if (type === 'audio') {
+        return (
+            <AudioNode id={id}
+                       content={content}
+                       setContent={setContent}
+                       type={type}/>
         )
     }
+
 }
 export default Node
 /*
